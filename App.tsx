@@ -1,11 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, Image } from 'react-native';
+
+import Button from './component/Button';
+import ImageViewer from './component/ImageViewer';
+
+const PlaceholderImage = require('./assets/images/background-image.png');
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>android not working 
-      </Text>
+      <View style={styles.imageContainer}>
+        <ImageViewer placeholderImageSource={PlaceholderImage}/> 
+      </View>
+      <View style={styles.footerContainer}>
+
+      </View>
       <StatusBar style="auto" />
     </View>
   );
@@ -14,8 +23,21 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#25292e',
     alignItems: 'center',
-    justifyContent: 'center',
+  },
+  imageContainer: {
+    flex: 1,
+    paddingTop: 58,
+  },
+  image: {
+    width: 320,
+    height: 440,
+    borderRadius: 18,
+  },
+  footerContainer: {
+    flex: 1 / 3,
+    alignItems: 'center',
   },
 });
+
