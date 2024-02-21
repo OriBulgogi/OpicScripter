@@ -3,7 +3,7 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 type ButtonProps= {
   theme ?: string;
   label : string;
-  onPress ?: () => Promise<void>;
+  onPress ?: () => void;
 }
 export default function Button({theme,label,onPress} :ButtonProps) {
   if (theme === "primary") {
